@@ -9,93 +9,83 @@
     // BASE DE DATOS COMPLETA DE RECURSOS POR PROYECTO (IMÁGENES Y VIDEOS)
     const projectsGallery = {
         '01_oficina_204': [
-            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_1.jpg',
-            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_2.jpg',
-            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_3.jpg',
-            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_4.jpg'
+            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_1.jpeg',
+            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_2.jpeg',
+            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_3.jpeg',
+            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_4.jpeg'
         ],
         '02_oficina_801': [
+            'Galeria_Proyectos_CF/02_oficina_801/oficina801-cowork.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaaux2.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal1.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal2.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal3.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaux.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-recepcion-2.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-recepcion-3.jpeg',
             'Galeria_Proyectos_CF/02_oficina_801/oficina801-recepcion.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal2.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-recepcion4.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Videofinal-801.mp4',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-detalles1.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-detalles2.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-detalles3.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-detalles4.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-detalles5.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal1.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal3.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas1.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas2.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas3.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas4.jpg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas5.jpg'
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-recepcion4.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas1.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas2.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas3.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas4.jpeg',
+            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas5.jpeg'
         ],
         '03_marca_cafe_amor_de_mujer': [
-            'Galeria_Proyectos_CF/03_marca_cafe_amor_de_mujer/Cafe_amo_de_mujer_01.jpg'
+            'Galeria_Proyectos_CF/03_marca_cafe_amor_de_mujer/Cafe_amo_de_mujer_01.jpeg'
         ],
         '04_marca_mercamio_chia': [
             'Galeria_Proyectos_CF/04_marca_mercamio_chia/Mercamio-chia-02.jpg',
-            'Galeria_Proyectos_CF/04_marca_mercamio_chia/Mercamio-chia-01.mp4'
         ],
         '05_proyecto_80': [
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_19.jpeg',
             'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_01.jpeg',
             'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_02.jpeg',
             'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_03.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_04.MOV',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_05.MOV',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_06.MOV',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_08.MOV',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_09.MOV',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_10.MOV',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_11.MOV',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_20.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_21.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_22.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_23.jpeg'
+            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_05jpeg.jpeg',
+            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_06.jpeg',
+            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_07.jpeg',
+            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_08.jpeg',
+            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_10.jpeg'
         ],
         '06_casa_campestre': [
-            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-01.png',
-            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-02.png',
-            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-03.jpg',
-            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-04.png'
+            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-01.jpeg',
+            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-02.jpeg',
+            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-03.jpeg',
+            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-04.jpeg'
         ],
         '07_rigarchem': [
-            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-01.jpg',
-            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-02.jpg',
-            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-03.jpg',
-            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-04.jpg'
+            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-01.jpeg',
+            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-02.jpeg',
+            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-03.jpeg',
+            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-04.jpeg'
         ],
         '08_casas_residenciales': [
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-3.jpg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-2.jpg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-4.jpg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-5.jpg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-6.jpg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/casa-resiedencial-hanbitacion.jpg'
+            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-3.jpeg',
+            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-2.jpeg',
+            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-4.jpeg',
+            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-5.jpeg',
+            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-6.jpeg',
+            'Galeria_Proyectos_CF/08_casas_residenciales/casa-resiedencial-hanbitacion.jpeg'
         ],
         '09_cocinas_integrales': [
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-5.jpg',
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-1.jpg',
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-4.jpg',
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-resiedencial-cocina-2.jpg',
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-resiedencial-cocina-3.jpg'
+            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-5.jpeg',
+            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-1.jpeg',
+            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-4.jpeg',
+            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-resiedencial-cocina-2.jpeg',
+            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-resiedencial-cocina-3.jpeg'
         ],
         '10_iluminacion_arquitectonica': [
             'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_02.jpeg',
-            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_04.jpeg',
-            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_05.jpeg',
-            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_01.MOV',
-            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_03.mov'
+            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_03.jpeg',
+            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_04.jpeg'
         ],
         '11_mobiliario': [
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_04.jpg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_01.jpg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_02.jpg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_03.jpg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_05.jpg'
+            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_01.jpeg',
+            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_02.jpeg',
+            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_03.jpeg',
+            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_04.jpeg',
+            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_05.jpeg',
+            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_06.jpeg'
         ]
     };
 
