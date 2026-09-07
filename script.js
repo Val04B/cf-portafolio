@@ -1,91 +1,93 @@
 /* ==========================================================================
    CONCEPTO & FORMA - ESTUDIO DE ARQUITECTURA Y DISEÑO
-   Lógica e Interactividad JavaScript v5.2
+   Lógica e Interactividad JavaScript v5.2 (Cloud Edition)
    ========================================================================== */
 
 (function () {
     'use strict';
 
-    // BASE DE DATOS COMPLETA DE RECURSOS POR PROYECTO (IMÁGENES Y VIDEOS)
+    // BASE DE DATOS COMPLETA DE RECURSOS POR PROYECTO (IMÁGENES Y VIDEOS EN DRIVE)
     const projectsGallery = {
         '01_oficina_204': [
-            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_1.jpeg',
-            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_2.jpeg',
-            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_3.jpeg',
-            'Galeria_Proyectos_CF/01_oficina_204/oficina_204_4.jpeg'
+            'https://lh3.googleusercontent.com/d/1DSOATA58Xc9GhjRIl-HVzAk2Uv6dCNl5',
+            'https://lh3.googleusercontent.com/d/19o9QuZ6YAGFZzsQMPO-E0Ab6oASr8JHj',
+            'https://lh3.googleusercontent.com/d/1fk-riL10A-Nc-D9Y2rWvm8Az5CnINRMc'
         ],
         '02_oficina_801': [
-            'Galeria_Proyectos_CF/02_oficina_801/oficina801-cowork.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaaux2.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal1.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal2.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaprincipal3.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-oficinaux.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-recepcion-2.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-recepcion-3.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/oficina801-recepcion.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-recepcion4.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas1.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas2.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas3.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas4.jpeg',
-            'Galeria_Proyectos_CF/02_oficina_801/Oficina801-saladejuntas5.jpeg'
+            'https://lh3.googleusercontent.com/d/1sI7v61SeRLfeA_gLRrWIBWt0WG9bfSS_',
+            'https://lh3.googleusercontent.com/d/1Q6bCEeEXAZVP43iFd1hVU8IzbE3UjLsO',
+            'https://lh3.googleusercontent.com/d/12hrY4E4mwIbDZJ6ckq6CUjWFw9NARwzf',
+            'https://lh3.googleusercontent.com/d/1WpMWHSkxT0fcra2YYFUi88To10psK7BB',
+            'https://lh3.googleusercontent.com/d/16IoQyNVeHiDYu9yzH_5ORdkqXB8k5tjx',
+            'https://lh3.googleusercontent.com/d/1NeuUM17GG9iFy8i1cA4TZ_fK1TPaWUed',
+            'https://lh3.googleusercontent.com/d/1OBpEFxXFb7ReeNJsNvyBZu21gV4Crs_n',
+            'https://lh3.googleusercontent.com/d/1U8hSzXLKZ8-UBC7eJ3Q7yYbuRSkLLQVo',
+            'https://lh3.googleusercontent.com/d/1miSgfSzAg5kg-h13eKPK4d_LJTbhK8vM',
+            'https://lh3.googleusercontent.com/d/1QttH0vYZybnC4Y9cY5vb8gnmvPwGBiq5',
+            'https://lh3.googleusercontent.com/d/1ibRI9GzF1wMBa6AfTiwe-KiBoiY1kOZ9',
+            'https://lh3.googleusercontent.com/d/1HwjYeqg0v_6iMz1RU1SpELYHLZmt3oo0',
+            'https://lh3.googleusercontent.com/d/1gTkweTsrJA8vW3rSSQd9oITryr5SC4Mt',
+            'https://lh3.googleusercontent.com/d/1w1X4DIT_4nUeksKnd_PxGk2TVj4u_1v-'
         ],
         '03_marca_cafe_amor_de_mujer': [
-            'Galeria_Proyectos_CF/03_marca_cafe_amor_de_mujer/Cafe_amo_de_mujer_01.jpeg'
+            'https://lh3.googleusercontent.com/d/1_HPibMU-ppSq5W6QhKKGEpsBWoqN6dVO'
         ],
         '04_marca_mercamio_chia': [
-            'Galeria_Proyectos_CF/04_marca_mercamio_chia/Mercamio-chia-02.jpg',
+            'https://lh3.googleusercontent.com/d/1HXKQM5P9YM_kgK29Vt9UlAx2OLtOJ4pu#.mp4',
+            'https://lh3.googleusercontent.com/d/10siaRBQtgSG3L8HhRcocF7jqk9-5C0Mr'
         ],
         '05_proyecto_80': [
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_01.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_02.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_03.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_05jpeg.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_06.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_07.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_08.jpeg',
-            'Galeria_Proyectos_CF/05_proyecto_80/Mercamio80_10.jpeg'
+            'https://lh3.googleusercontent.com/d/1OIalIJNr8vVpgJkVI3gkk5o-KUmq-TQ4',
+            'https://lh3.googleusercontent.com/d/1MkhsKFJOgoxjt0q8ptfBwdc0lSRN1mZq#.mp4',
+            'https://lh3.googleusercontent.com/d/19fU0vzPtUOP4-GpaiX3TDRRgDgLsQWxl#.mp4',
+            'https://lh3.googleusercontent.com/d/12SUvLR5u5Vod-k5c44cI_LiNx3iBOGgH',
+            'https://lh3.googleusercontent.com/d/1is-qokRaVSdLFH_1cLfqU5TBRO8lPV8y',
+            'https://lh3.googleusercontent.com/d/1En1k5luld8pnapmrxpqGXVJ32dsMsdrP',
+            'https://lh3.googleusercontent.com/d/1ihav2ajnuqucXRlHkWXZNtE0lSjmh9mz',
+            'https://lh3.googleusercontent.com/d/1iLBvtnNmhpYD7NR5M3djJoUQZi9AXY-n',
+            'https://lh3.googleusercontent.com/d/1K3-eJYJyAvP9UjENIQcwGIxTEYZPEsAd#.mp4',
+            'https://lh3.googleusercontent.com/d/1DPUQpiBIJaymaKxKmvo0On--fDqSFeC4#.mp4'
         ],
         '06_casa_campestre': [
-            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-01.jpeg',
-            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-02.jpeg',
-            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-03.jpeg',
-            'Galeria_Proyectos_CF/06_casa_campestre/Casa-campestre-04.jpeg'
+            'https://lh3.googleusercontent.com/d/1zVesUqiiFuq1dPIKCvy1kiCY9BsH7nls',
+            'https://lh3.googleusercontent.com/d/1s8H31kM-cwQCigJoIUpj5x8fV8t4VC-c',
+            'https://lh3.googleusercontent.com/d/1EP8wen6405t2hqnVXk0iknVYYx5bfJMn',
+            'https://lh3.googleusercontent.com/d/1T2K5RPXJQw4Dd6cVLSdiEDIrN-LWgQd1'
         ],
         '07_rigarchem': [
-            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-01.jpeg',
-            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-02.jpeg',
-            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-03.jpeg',
-            'Galeria_Proyectos_CF/07_rigarchem/Rigarchem-04.jpeg'
+            'https://lh3.googleusercontent.com/d/1RDPzehwHkF83LXHNGqxNuxHWCsr_O4sf',
+            'https://lh3.googleusercontent.com/d/1jQvkeKr6X-Fmg_3DmYG9W2ozaykglDwl',
+            'https://lh3.googleusercontent.com/d/1GAq3cbQzRD3uBPJ7VFLs9VmT6Zfp8r5g',
+            'https://lh3.googleusercontent.com/d/1-oghYXrOy7RwLp5ZTf4zxHUdzt1v-MaN'
         ],
         '08_casas_residenciales': [
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-3.jpeg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-2.jpeg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-4.jpeg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-5.jpeg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/interiorismo-6.jpeg',
-            'Galeria_Proyectos_CF/08_casas_residenciales/casa-resiedencial-hanbitacion.jpeg'
+            'https://lh3.googleusercontent.com/d/1FnSMSjfVfXN0wVXePO81u2TZso1Mj2sE',
+            'https://lh3.googleusercontent.com/d/17RXPDciJvL4JBQ9MF1T0UEVhgTTm7bCJ',
+            'https://lh3.googleusercontent.com/d/1QDyIt4J-lzexPRgzmFU8-8zSEw8bvXIl',
+            'https://lh3.googleusercontent.com/d/1TjOFzMPvRUU75XcpGZs6PNfv9Vv8tSzV',
+            'https://lh3.googleusercontent.com/d/14YSQa9t6ccQVF08NS1XdujcMX3xxUh4K',
+            'https://lh3.googleusercontent.com/d/13WNBH70avhDvkGhZQpeyW_hbYGkijV6X'
         ],
         '09_cocinas_integrales': [
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-5.jpeg',
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-1.jpeg',
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-residencial-cocina-4.jpeg',
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-resiedencial-cocina-2.jpeg',
-            'Galeria_Proyectos_CF/09_cocinas_integrales/casa-resiedencial-cocina-3.jpeg'
+            'https://lh3.googleusercontent.com/d/1LuYK8mkiJr139be-xNqQylwDC1QTa7pD',
+            'https://lh3.googleusercontent.com/d/1VyfJdZTI_FEjSs9gpWpbgsufalS72jSa',
+            'https://lh3.googleusercontent.com/d/1efvj7z0kTf22Qw-2Knk-Is1phzwfwCDt',
+            'https://lh3.googleusercontent.com/d/1yPvr5vJYr58HnlnyjYsEk5aLuWvRZW1X',
+            'https://lh3.googleusercontent.com/d/1DCp6F34RiNBorFUWWCr4gBKtGOgbfSDc'
         ],
         '10_iluminacion_arquitectonica': [
-            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_02.jpeg',
-            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_03.jpeg',
-            'Galeria_Proyectos_CF/10_Iluminacion-arquitectonica/Iluminacion_04.jpeg'
+            'https://lh3.googleusercontent.com/d/1xBPoFMoL6ioCS7NvhChTdxQGfHkMA_Vi#.mp4',
+            'https://lh3.googleusercontent.com/d/1hEjgwC6_CFRk6cClS-FQYt7rGBGImk14',
+            'https://lh3.googleusercontent.com/d/1ML3sNi241YCZizc-9Nt5ekXp3So_fep0',
+            'https://lh3.googleusercontent.com/d/1Lu_1SYw8a3DOuy8Jolm6sA4IMeYUV7qL'
         ],
         '11_mobiliario': [
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_01.jpeg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_02.jpeg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_03.jpeg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_04.jpeg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_05.jpeg',
-            'Galeria_Proyectos_CF/11_Mobiliario/Mobiliario_06.jpeg'
+            'https://lh3.googleusercontent.com/d/1O8IKtmf2Hdh31CyePKl_eV_oLj6pFD3K',
+            'https://lh3.googleusercontent.com/d/1n2DeokAQNQgey6uEachq_49T5XIhVMz-',
+            'https://lh3.googleusercontent.com/d/16uWjvImtSxUL23icCxsUU2VmTQyu3dHx',
+            'https://lh3.googleusercontent.com/d/1F86oPmDZPzhpiuqPxNswllDTeoPa81XI',
+            'https://lh3.googleusercontent.com/d/1p8swyYRv4oqS2bdVkjEaMlXrYzH4ZDiI',
+            'https://lh3.googleusercontent.com/d/1r0sf9MVEiiCl2_uhSxI-KuMuj0mCC1SR'
         ]
     };
 
@@ -101,7 +103,7 @@
     projectsGallery['casas-residenciales'] = projectsGallery['08_casas_residenciales'];
     projectsGallery['cocinas-integrales'] = projectsGallery['09_cocinas_integrales'];
     projectsGallery['iluminacion'] = projectsGallery['10_iluminacion_arquitectonica'];
-    projectsGallery['10_Diseño de iluminación arquitectónica'] = projectsGallery['10_iluminacion_arquitectonica'];
+    projectsGallery['10_Diseño de iluminación arquitectónica'] = projectsGallery['10_iluminacion_arquitectonica'];
     projectsGallery['mobiliario'] = projectsGallery['11_mobiliario'];
     projectsGallery['11_Mobiliario'] = projectsGallery['11_mobiliario'];
 
