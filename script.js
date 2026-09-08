@@ -279,12 +279,11 @@
         if (!modal || !projectCards.length) return;
 
         function isVideoFile(src) {
-            const ext = src.split('.').pop().toLowerCase();
-            return ['mp4', 'mov', 'webm', 'ogg'].includes(ext);
+            return src.includes('.mp4') || src.includes('.mov');
         }
 
         function openModal(card) {
-            const projectKey = card.getAttribute('data-project');
+            onst projectKey = card.getAttribute('data-project');
             const title = card.getAttribute('data-title') || card.querySelector('.project-title')?.innerText;
             const category = card.getAttribute('data-subtitle') || card.querySelector('.project-cat')?.innerText;
             const desc = card.getAttribute('data-desc') || '';
@@ -295,9 +294,7 @@
 
             let mediaFiles = projectsGallery[projectKey] ||
                              (projectKey ? projectsGallery[projectKey.replace(/-/g, '_')] : null) ||
-                             (projectKey ? projectsGallery[projectKey.replace(/_/g, '-')] : null) ||
-                             (projectKey && projectKey.includes('801') ? projectsGallery['02_oficina_801'] : null) ||
-                             (projectKey && projectKey.includes('80') ? projectsGallery['05_proyecto_80'] : null);
+                             (projectKey ? projectsGallery[projectKey.replace(/_/g, '-')] : null);
 
             if (!mediaFiles || !mediaFiles.length) {
                 const cardImg = card.querySelector('img')?.getAttribute('src');
@@ -320,8 +317,8 @@
             modal.setAttribute('aria-hidden', 'true');
             document.body.classList.remove('no-scroll');
 
+            // Detiene el video al cerrar
             if (mainVideo) {
-                mainVideo.pause();
                 mainVideo.src = '';
             }
         }
@@ -336,15 +333,18 @@
             const mediaSrc = currentMediaList[currentIndex];
 
             if (isVideoFile(mediaSrc)) {
+                // Extrae el ID y genera el enlace del reproductor de Google
+                const fileId = mediaSrc.split('/d/')[1].split('#')[0];
+                const iframeSrc = `https://drive.google.com/file/d/${fileId}/preview`;
+
                 if (mainImg) mainImg.style.display = 'none';
                 if (videoContainer) videoContainer.style.display = 'block';
                 if (mainVideo) {
-                    mainVideo.src = mediaSrc;
-                    mainVideo.play().catch(() => {});
+                    mainVideo.src = iframeSrc;
                 }
             } else {
                 if (videoContainer) videoContainer.style.display = 'none';
-                if (mainVideo) mainVideo.pause();
+                if (mainVideo) mainVideo.src = ''; 
                 if (mainImg) {
                     mainImg.style.display = 'block';
                     mainImg.src = mediaSrc;
@@ -382,10 +382,8 @@
                 thumbDiv.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
 
                 if (isVideoFile(src)) {
-                    const videoEl = document.createElement('video');
-                    videoEl.src = src;
-                    videoEl.muted = true;
-                    thumbDiv.appendChild(videoEl);
+                    // Crea un ícono elegante de Play para las miniaturas de video
+                    thumbDiv.innerHTML = `<div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#1A1A1A; color:var(--accent); font-size:1.2rem;">▶</div>`;
                 } else {
                     const imgEl = document.createElement('img');
                     imgEl.src = src;
