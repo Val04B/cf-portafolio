@@ -271,7 +271,7 @@
 
         const mainImg = document.getElementById('lightbox-img');
         const videoContainer = document.getElementById('lightbox-video-container');
-        const mainVideo = document.getElementById('lightbox-video');
+        const mainVideo = document.getElementById('lightbox-video'); // Este ahora es el iframe
 
         const thumbnailsContainer = document.getElementById('lightbox-thumbnails');
         const projectCards = document.querySelectorAll('.project-card');
@@ -279,11 +279,11 @@
         if (!modal || !projectCards.length) return;
 
         function isVideoFile(src) {
-            return src.includes('.mp4') || src.includes('.mov');
+            return src && src.includes('.mp4');
         }
 
         function openModal(card) {
-            onst projectKey = card.getAttribute('data-project');
+            const projectKey = card.getAttribute('data-project');
             const title = card.getAttribute('data-title') || card.querySelector('.project-title')?.innerText;
             const category = card.getAttribute('data-subtitle') || card.querySelector('.project-cat')?.innerText;
             const desc = card.getAttribute('data-desc') || '';
@@ -317,7 +317,7 @@
             modal.setAttribute('aria-hidden', 'true');
             document.body.classList.remove('no-scroll');
 
-            // Detiene el video al cerrar
+            // Detiene el iframe del video al cerrar la galería
             if (mainVideo) {
                 mainVideo.src = '';
             }
@@ -333,9 +333,10 @@
             const mediaSrc = currentMediaList[currentIndex];
 
             if (isVideoFile(mediaSrc)) {
-                // Extrae el ID y genera el enlace del reproductor de Google
-                const fileId = mediaSrc.split('/d/')[1].split('#')[0];
-                const iframeSrc = `https://drive.google.com/file/d/${fileId}/preview`;
+                // Extrae el ID de Google Drive de manera segura y genera el enlace del reproductor
+                const fileIdMatch = mediaSrc.match(/\/d\/([^/#?]+)/);
+                const fileId = fileIdMatch ? fileIdMatch[1] : '';
+                const iframeSrc = fileId ? `https://drive.google.com/file/d/${fileId}/preview` : mediaSrc;
 
                 if (mainImg) mainImg.style.display = 'none';
                 if (videoContainer) videoContainer.style.display = 'block';
@@ -382,7 +383,7 @@
                 thumbDiv.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
 
                 if (isVideoFile(src)) {
-                    // Crea un ícono elegante de Play para las miniaturas de video
+                    // Crea un ícono elegante de "Play" para las miniaturas que son video
                     thumbDiv.innerHTML = `<div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#1A1A1A; color:var(--accent); font-size:1.2rem;">▶</div>`;
                 } else {
                     const imgEl = document.createElement('img');
