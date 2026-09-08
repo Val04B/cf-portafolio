@@ -973,8 +973,28 @@ a {
     .grid-philosophy, .grid-about, .grid-contact { grid-template-columns: 1fr; gap: 3rem; }
     .bento-grid { grid-template-columns: repeat(2, 1fr); }
     .bento-card.bento-w2 { grid-column: span 2; }
-    .lightbox-content { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
-    .lightbox-sidebar { padding: 2rem; }
+    
+    /* CORRECCIÓN GALERÍA MÓVIL: Imagen arriba, texto abajo y scrolleable */
+    .lightbox-content { 
+        display: flex !important;
+        flex-direction: column-reverse !important; 
+        overflow-y: auto !important;
+        height: 90vh;
+    }
+    .lightbox-sidebar { 
+        padding: 2rem 1.5rem; 
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        flex: none;
+    }
+    .lightbox-viewer { 
+        height: 55vh; 
+        flex: none;
+    }
+    .lightbox-main-media { padding: 1rem; }
+    .lightbox-media-wrapper img { max-height: 100%; }
+    .lightbox-prev { left: 0.5rem; }
+    .lightbox-next { right: 0.5rem !important; }
 }
 
 @media (max-width: 768px) {
